@@ -1,26 +1,52 @@
 //🟢Setup Procedure - Runs Once to Set The Canvas
-void setup() {
-    size(400, 400); 
+void setup(elypse) {
+    size(400, 400,300,200); 
+    frameRate(5)
 }
 
 //🎯Variable Declarations Go Here
 var fireworkX = 20;
+var meteorY = 7;
+var fireSize = -400;
+          
 
 //🟢Draw Procedure - Runs on Repeat
-draw = function(){
+draw = function(circle){
  
   background(255,255,255,0);
   
    if(mousePressed){
-    showXYPositions();
+    showXYPositions(400);
     
   }
-  
+        
   //🎯Animation Code Goes Here
-  rect(fireworkX, 15, 10, 10);
-  
-  fireworkX = fireworkX + 1;
+  fill(40,200,49)
+  rect(fireworkX,random(200,300),100,100);
 
+fill(107, 95, 94)
+ellipse(220,meteorY,40,40);
+
+fill(247, 115, 7)
+ellipse(210,268,fireSize,fireSize)
+
+
+
+
+ 
+
+ 
+
+
+
+
+
+
+
+  fireworkX = fireworkX + 5;
+  meteorY = meteorY + 10;
+fireSize = fireSize + 20;
+           
 }
 
 //🟡Extra FUN Features Ms. Hall Added
